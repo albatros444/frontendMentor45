@@ -13,9 +13,9 @@
     .name {
       display: flex;
       gap: 15px;
-      margin-bottom: 25px;
       .inputBox {
         width: 100%;
+        margin-bottom: 20px;
         .wrongSubmit {
           border: 1px solid $red;
           & + p {
@@ -42,7 +42,7 @@
     }
     ////radio/////////
     .queryType {
-      margin-bottom: 30px;
+      margin-bottom: 15px;
       legend::after {
         content: url(/assets/images/star.svg);
         position: absolute;
@@ -65,6 +65,7 @@
           border: 1px solid hsl(187, 24%, 22%, 60%);
           height: 48px;
           width: 100%;
+          margin-bottom: 15px;
           input {
             appearance: none;
             flex-shrink: 0;
@@ -131,15 +132,31 @@
       label {
         margin-left: 15px;
         padding-top: 2px;
+        padding-right: 15px;
         cursor: pointer;
+        &:after {
+          display: none;
+        }
+        span {
+          position: relative;
+          &:after {
+            content: url(/assets/images/star.svg);
+            display: inline-block;
+            position: absolute;
+            top: -6px;
+            right: -12px;
+          }
+        }
       }
       .boxForCheck {
         display: flex;
-        align-items: start;
+        align-items: center;
+
         #consentCheckbox {
           appearance: none;
           width: 18px;
           height: 18px;
+          flex-shrink: 0;
           cursor: pointer;
           border-radius: 2px;
           border: 2px solid hsl(187, 14%, 62%, 80%);

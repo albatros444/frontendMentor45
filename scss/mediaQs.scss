@@ -1,0 +1,22 @@
+@media screen and (max-width: 600px) {
+  .background {
+    padding: 30px 15px;
+    .card {
+      margin: 0;
+      padding: 20px;
+      .name {
+        display: block;
+      }
+      .queryType {
+        .inputBox {
+          display: block;
+        }
+      }
+      .boxForMessage {
+        textarea {
+          height: 250px;
+        }
+      }
+    }
+  }
+}

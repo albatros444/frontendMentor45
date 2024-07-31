@@ -75,10 +75,10 @@ ul {
 .card form .name {
   display: flex;
   gap: 15px;
-  margin-bottom: 25px;
 }
 .card form .name .inputBox {
   width: 100%;
+  margin-bottom: 20px;
 }
 .card form .name .inputBox .wrongSubmit {
   border: 1px solid hsl(0, 66%, 54%);
@@ -100,7 +100,7 @@ ul {
   display: block;
 }
 .card form .queryType {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .card form .queryType legend::after {
   content: url(/assets/images/star.svg);
@@ -124,6 +124,7 @@ ul {
   border: 1px solid hsla(187, 24%, 22%, 0.6);
   height: 48px;
   width: 100%;
+  margin-bottom: 15px;
 }
 .card form .queryType .inputBox .box input {
   appearance: none;
@@ -185,16 +186,31 @@ ul {
 .card form .boxForCheckbox label {
   margin-left: 15px;
   padding-top: 2px;
+  padding-right: 15px;
   cursor: pointer;
+}
+.card form .boxForCheckbox label:after {
+  display: none;
+}
+.card form .boxForCheckbox label span {
+  position: relative;
+}
+.card form .boxForCheckbox label span:after {
+  content: url(/assets/images/star.svg);
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  right: -12px;
 }
 .card form .boxForCheckbox .boxForCheck {
   display: flex;
-  align-items: start;
+  align-items: center;
 }
 .card form .boxForCheckbox .boxForCheck #consentCheckbox {
   appearance: none;
   width: 18px;
   height: 18px;
+  flex-shrink: 0;
   cursor: pointer;
   border-radius: 2px;
   border: 2px solid hsla(187, 14%, 62%, 0.8);
@@ -291,6 +307,24 @@ ul {
   to {
     top: 0;
     opacity: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .background {
+    padding: 30px 15px;
+  }
+  .background .card {
+    margin: 0;
+    padding: 20px;
+  }
+  .background .card .name {
+    display: block;
+  }
+  .background .card .queryType .inputBox {
+    display: block;
+  }
+  .background .card .boxForMessage textarea {
+    height: 250px;
   }
 }
 .background {
