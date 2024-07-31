@@ -322,7 +322,7 @@ ul {
   }
   .background .card {
     margin: 0;
-    padding: 20px;
+    padding: 22px;
   }
   .background .card .name {
     display: block;
@@ -331,7 +331,22 @@ ul {
     display: block;
   }
   .background .card .boxForMessage textarea {
-    height: 250px;
+    height: 240px;
+  }
+  .background .card .boxForCheckbox label {
+    line-height: 1.5;
+  }
+  .background .card .boxForCheckbox .errorMessage {
+    margin-left: 2px;
+  }
+  .background .card button {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  .toast {
+    width: 80%;
+    margin: 0;
+    transform: translate(-50%);
   }
 }
 .background {

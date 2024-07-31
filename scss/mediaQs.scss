@@ -3,20 +3,39 @@
     padding: 30px 15px;
     .card {
       margin: 0;
-      padding: 20px;
+      padding: 22px;
       .name {
         display: block;
       }
       .queryType {
         .inputBox {
           display: block;
+          .box {
+          }
         }
       }
       .boxForMessage {
         textarea {
-          height: 250px;
+          height: 240px;
         }
       }
+      .boxForCheckbox {
+        label {
+          line-height: 1.5;
+        }
+        .errorMessage {
+          margin-left: 2px;
+        }
+      }
+      button {
+        margin-left: 2px; ///compensate for borders on inputs
+        margin-right: 2px;
+      }
     }
+  }
+  .toast {
+    width: 80%;
+    margin: 0;
+    transform: translate(-50%);
   }
 }
