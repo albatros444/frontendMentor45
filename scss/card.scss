@@ -2,20 +2,21 @@
   width: 735px;
   margin-top: 40px;
   margin-bottom: 40px;
-  padding: 40px;
+  padding: 38px 40px;
   border-radius: 15px;
   background-color: $white;
   form {
     h1 {
       margin-bottom: 30px;
+      letter-spacing: -0.02em;
       color: hsl(187, 24%, 22%);
     }
     .name {
       display: flex;
-      gap: 15px;
+      gap: 16px;
       .inputBox {
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
         .wrongSubmit {
           border: 1px solid $red;
           & + p {
@@ -52,7 +53,7 @@
       .inputBox {
         display: flex;
         margin-top: 15px;
-        gap: 15px;
+        gap: 16px;
 
         .box:has(input:checked) {
           background-color: $green200;
@@ -63,15 +64,15 @@
           align-items: center;
           border-radius: 8px;
           border: 1px solid hsl(187, 24%, 22%, 60%);
-          height: 48px;
+          height: 52px;
           width: 100%;
           margin-bottom: 15px;
           input {
             appearance: none;
             flex-shrink: 0;
             background-color: white;
-            width: 19px;
-            height: 19px;
+            width: 20px;
+            height: 20px;
             margin: 0 17px 0 25px;
             border-radius: 50%;
             cursor: pointer;
@@ -79,15 +80,15 @@
             &:checked {
               position: relative;
               background-color: $green200;
-              border: 2px solid green;
+              border: 2px solid $green600;
               &:after {
                 content: "";
                 display: block;
                 position: absolute;
                 top: 3px;
                 left: 3px;
-                width: 9px;
-                height: 9px;
+                width: 10px;
+                height: 10px;
                 border-radius: 50%;
                 background-color: $green600;
               }
@@ -98,6 +99,7 @@
             cursor: pointer;
             margin-bottom: 0;
             width: 100%;
+            font-size: 18px;
             &:after {
               content: "";
             }
@@ -106,6 +108,8 @@
       }
       .wrongSubmit + .errorMessage {
         display: block;
+        margin-top: 0;
+        margin-bottom: 13px;
       }
     }
     ///message/////
@@ -113,7 +117,7 @@
       margin: 0 2px; ////to align with query input
       margin-bottom: 40px;
       textarea {
-        height: 100px;
+        height: 105px;
         padding: 12px 18px 12px 22px;
         resize: none;
         line-height: 1.5;
@@ -203,6 +207,10 @@
       text-decoration: none;
       background: $green600;
       color: $white;
+      transition: all 0.13s ease-in-out;
+      &:hover {
+        background: hsl(169, 82%, 14%); //custom
+      }
     }
     /////////
   }

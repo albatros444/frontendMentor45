@@ -26,7 +26,7 @@ legend {
 label:after {
   content: url(/assets/images/star.svg);
   position: absolute;
-  top: -6px;
+  top: -5px;
   right: -15px;
 }
 input,
@@ -39,9 +39,9 @@ input[type="email"],
 textarea {
   border-radius: 8px;
   border: 1px solid hsl(187, 24%, 22%, 60%);
-  height: 48px;
+  height: 52px;
   width: 100%;
-  margin-top: 15px;
+  margin-top: 10px;
   padding-left: 20px;
   font-size: 18px;
   color: hsl(187, 24%, 22%);

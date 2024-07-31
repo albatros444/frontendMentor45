@@ -77,10 +77,15 @@ form.addEventListener("submit", (e) => {
     setTimeout(() => {
       toast.classList.remove("toastShow");
     }, 3950);
+    textArea.value = "";
+    inputs.forEach((input) => {
+      input.value = "";
+      input.checked = false;
+    });
   }
 });
 
 /////
-toast.addEventListener("click", () => {
-  form.submit();
-});
+// toast.addEventListener("click", () => {
+//   form.submit();
+// });
