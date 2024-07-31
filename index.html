@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,17 +21,94 @@
     <title>Frontend Mentor | Contact form</title>
   </head>
   <body>
-    Contact Us First Name This field is required Last Name This field is
-    required Email Address Please enter a valid email address This field is
-    required Query Type General Enquiry Support Request Please select a query
-    type Message This field is required I consent to being contacted by the team
-    To submit this form, please consent to being contacted Submit Message Sent!
-    Thanks for completing the form. We'll be in touch soon!
+    <div class="toast">
+      <div class="box">
+        <img src="/assets/images/icon-success-check.svg" alt="" />
+        <h2>Message Sent!</h2>
+      </div>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+    <div class="background">
+      <div class="card">
+        <form action="">
+          <h1>Contact Us</h1>
+          <!-- //name/// -->
+          <fieldset class="name">
+            <div class="inputBox">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                spellcheck="false"
+              />
+              <p class="errorMessage">This field is required</p>
+            </div>
+            <div class="inputBox">
+              <label for="lastName">Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                spellcheck="false"
+              />
+              <p class="errorMessage">This field is required</p>
+            </div>
+          </fieldset>
+          <!-- ///email///// -->
+          <div class="inputBox boxForEmail">
+            <label for="email">Email Address</label>
+            <input type="text" inputmode="email" id="email" name="email" />
+            <p class="errorMessage">Please enter a valid email address</p>
+          </div>
+          <!-- ////radio buttons///// -->
+          <fieldset class="queryType">
+            <legend>Query Type</legend>
+            <div class="inputBox queryTypeBox">
+              <div class="box">
+                <input type="radio" id="generalEnquiry" name="queryType" />
+                <label for="generalEnquiry">General Enquiry</label>
+              </div>
+              <div class="box">
+                <input type="radio" id="supportRequest" name="queryType" />
+                <label for="supportRequest">Support Request</label>
+              </div>
+            </div>
+            <p class="errorMessage">Please select a query type</p>
+          </fieldset>
+          <!-- ////message////// -->
+          <div class="inputBox boxForMessage">
+            <label for="message">Message</label>
+            <textarea spellcheck="false" id="message" name="message"></textarea>
+            <p class="errorMessage">This field is required</p>
+          </div>
+          <!-- ////checkbox//// -->
+          <div class="inputBox boxForCheckbox">
+            <div class="boxForCheck">
+              <input
+                type="checkbox"
+                id="consentCheckbox"
+                name="consentCheckbox"
+              />
+              <label for="consentCheckbox"
+                >I consent to being contacted by the team</label
+              >
+            </div>
+            <p class="errorMessage">
+              To submit this form, please consent to being contacted
+            </p>
+          </div>
+
+          <button>Submit</button>
+        </form>
+      </div>
+    </div>
 
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
       Coded by <a href="#">Batenkin Alexander</a>.
     </div>
+    <script src="bundle.js"></script>
   </body>
 </html>

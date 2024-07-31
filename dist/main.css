@@ -16,7 +16,7 @@ body {
   padding: 0;
   font-family: "Karla", sans-serif;
   font-size: 16px;
-  /* //position: relative; ///for footer with absolute position --> */
+  position: relative;
 }
 body h1,
 body h2,
@@ -58,6 +58,297 @@ ul {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.card {
+  width: 735px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 40px;
+  border-radius: 15px;
+  background-color: hsl(0, 0%, 100%);
+}
+.card form h1 {
+  margin-bottom: 30px;
+  color: hsl(187, 24%, 22%);
+}
+.card form .name {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+.card form .name .inputBox {
+  width: 100%;
+}
+.card form .name .inputBox .wrongSubmit {
+  border: 1px solid hsl(0, 66%, 54%);
+}
+.card form .name .inputBox .wrongSubmit + p {
+  display: block;
+}
+.card form .boxForEmail {
+  margin: 0 2px;
+  margin-bottom: 25px;
+}
+.card form .boxForEmail #email input:focus {
+  border: 1px solid hsl(169, 82%, 27%);
+}
+.card form .boxForEmail .wrongSubmit {
+  border: 1px solid hsl(0, 66%, 54%);
+}
+.card form .boxForEmail .wrongSubmit + p {
+  display: block;
+}
+.card form .queryType {
+  margin-bottom: 30px;
+}
+.card form .queryType legend::after {
+  content: url(/assets/images/star.svg);
+  position: absolute;
+  top: -6px;
+  right: -15px;
+}
+.card form .queryType .inputBox {
+  display: flex;
+  margin-top: 15px;
+  gap: 15px;
+}
+.card form .queryType .inputBox .box:has(input:checked) {
+  background-color: hsl(148, 38%, 91%);
+  border: 1px solid hsl(169, 82%, 27%);
+}
+.card form .queryType .inputBox .box {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid hsla(187, 24%, 22%, 0.6);
+  height: 48px;
+  width: 100%;
+}
+.card form .queryType .inputBox .box input {
+  appearance: none;
+  flex-shrink: 0;
+  background-color: white;
+  width: 19px;
+  height: 19px;
+  margin: 0 17px 0 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid hsla(187, 14%, 62%, 0.8);
+}
+.card form .queryType .inputBox .box input:checked {
+  position: relative;
+  background-color: hsl(148, 38%, 91%);
+  border: 2px solid green;
+}
+.card form .queryType .inputBox .box input:checked:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: hsl(169, 82%, 27%);
+}
+.card form .queryType .inputBox .box label {
+  cursor: pointer;
+  margin-bottom: 0;
+  width: 100%;
+}
+.card form .queryType .inputBox .box label:after {
+  content: "";
+}
+.card form .queryType .wrongSubmit + .errorMessage {
+  display: block;
+}
+.card form .boxForMessage {
+  margin: 0 2px;
+  margin-bottom: 40px;
+}
+.card form .boxForMessage textarea {
+  height: 100px;
+  padding: 12px 18px 12px 22px;
+  resize: none;
+  line-height: 1.5;
+}
+.card form .boxForMessage .wrongSubmit {
+  border: 1px solid hsl(0, 66%, 54%);
+}
+.card form .boxForMessage .wrongSubmit + p {
+  display: block;
+}
+.card form .boxForCheckbox {
+  margin-bottom: 40px;
+}
+.card form .boxForCheckbox label {
+  margin-left: 15px;
+  padding-top: 2px;
+  cursor: pointer;
+}
+.card form .boxForCheckbox .boxForCheck {
+  display: flex;
+  align-items: start;
+}
+.card form .boxForCheckbox .boxForCheck #consentCheckbox {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  border-radius: 2px;
+  border: 2px solid hsla(187, 14%, 62%, 0.8);
+  background-color: hsl(0, 0%, 100%);
+}
+.card form .boxForCheckbox .boxForCheck #consentCheckbox:checked {
+  position: relative;
+  background-color: hsl(169, 82%, 27%);
+  border: 2px solid hsl(169, 82%, 27%);
+}
+.card form .boxForCheckbox .boxForCheck #consentCheckbox:checked:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  width: 9px;
+  height: 5px;
+  border: solid hsla(0, 0%, 100%, 0.8);
+  border-width: 0 0 2px 2px;
+  transform: rotate(-45deg);
+}
+.card form .boxForCheckbox .boxForCheck:has(.wrongSubmit) + .errorMessage {
+  display: block;
+}
+.card form .boxForCheckbox label {
+  user-select: none;
+}
+.card form button {
+  display: inline-block;
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  outline: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  background: hsl(169, 82%, 27%);
+  color: hsl(0, 0%, 100%);
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  top: 20px;
+  visibility: hidden;
+  padding: 25px;
+  z-index: 1;
+  margin-left: -220px;
+  border-radius: 10px;
+  background-color: hsl(187, 24%, 22%);
+  color: hsl(148, 38%, 91%);
+}
+.toast .box {
+  display: flex;
+  margin-bottom: 14px;
+}
+.toast .box img {
+  margin-right: 8px;
+}
+.toast .box h2 {
+  font-size: 18px;
+}
+.toast p {
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.toastShow {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 3.5s;
+}
+
+@keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 20px;
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    top: 20px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  min-height: 100vh;
+  background-color: hsl(148, 38%, 91%);
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+label,
+legend {
+  position: relative;
+  color: hsl(187, 24%, 22%);
+  user-select: none;
+}
+
+label:after {
+  content: url(/assets/images/star.svg);
+  position: absolute;
+  top: -6px;
+  right: -15px;
+}
+
+input,
+textarea {
+  display: block;
+  position: relative;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  border-radius: 8px;
+  border: 1px solid hsla(187, 24%, 22%, 0.6);
+  height: 48px;
+  width: 100%;
+  margin-top: 15px;
+  padding-left: 20px;
+  font-size: 18px;
+  color: hsl(187, 24%, 22%);
+}
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+  border: 1px solid hsl(169, 82%, 27%);
+}
+
+.errorMessage {
+  display: none;
+  margin-top: 10px;
+  color: hsl(0, 66%, 54%);
 }
 
 /*# sourceMappingURL=main.css.map */

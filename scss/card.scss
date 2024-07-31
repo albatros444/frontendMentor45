@@ -1,0 +1,192 @@
+.card {
+  width: 735px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 40px;
+  border-radius: 15px;
+  background-color: $white;
+  form {
+    h1 {
+      margin-bottom: 30px;
+      color: hsl(187, 24%, 22%);
+    }
+    .name {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 25px;
+      .inputBox {
+        width: 100%;
+        .wrongSubmit {
+          border: 1px solid $red;
+          & + p {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .boxForEmail {
+      margin: 0 2px; ////to align with query and name inputs
+      margin-bottom: 25px;
+      #email {
+        input:focus {
+          border: 1px solid $green600;
+        }
+      }
+      .wrongSubmit {
+        border: 1px solid $red;
+        & + p {
+          display: block;
+        }
+      }
+    }
+    ////radio/////////
+    .queryType {
+      margin-bottom: 30px;
+      legend::after {
+        content: url(/assets/images/star.svg);
+        position: absolute;
+        top: -6px;
+        right: -15px;
+      }
+      .inputBox {
+        display: flex;
+        margin-top: 15px;
+        gap: 15px;
+
+        .box:has(input:checked) {
+          background-color: $green200;
+          border: 1px solid $green600;
+        }
+        .box {
+          display: flex;
+          align-items: center;
+          border-radius: 8px;
+          border: 1px solid hsl(187, 24%, 22%, 60%);
+          height: 48px;
+          width: 100%;
+          input {
+            appearance: none;
+            flex-shrink: 0;
+            background-color: white;
+            width: 19px;
+            height: 19px;
+            margin: 0 17px 0 25px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 1px solid hsl(187, 14%, 62%, 80%);
+            &:checked {
+              position: relative;
+              background-color: $green200;
+              border: 2px solid green;
+              &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 3px;
+                left: 3px;
+                width: 9px;
+                height: 9px;
+                border-radius: 50%;
+                background-color: $green600;
+              }
+            }
+          }
+
+          label {
+            cursor: pointer;
+            margin-bottom: 0;
+            width: 100%;
+            &:after {
+              content: "";
+            }
+          }
+        }
+      }
+      .wrongSubmit + .errorMessage {
+        display: block;
+      }
+    }
+    ///message/////
+    .boxForMessage {
+      margin: 0 2px; ////to align with query input
+      margin-bottom: 40px;
+      textarea {
+        height: 100px;
+        padding: 12px 18px 12px 22px;
+        resize: none;
+        line-height: 1.5;
+      }
+      .wrongSubmit {
+        border: 1px solid $red;
+        & + p {
+          display: block;
+        }
+      }
+    }
+
+    /////checkbox//////////
+    .boxForCheckbox {
+      margin-bottom: 40px;
+      label {
+        margin-left: 15px;
+        padding-top: 2px;
+        cursor: pointer;
+      }
+      .boxForCheck {
+        display: flex;
+        align-items: start;
+        #consentCheckbox {
+          appearance: none;
+          width: 18px;
+          height: 18px;
+          cursor: pointer;
+          border-radius: 2px;
+          border: 2px solid hsl(187, 14%, 62%, 80%);
+          background-color: $white;
+          &:checked {
+            position: relative;
+            background-color: $green600;
+            border: 2px solid $green600;
+            &:after {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 4px;
+              left: 3px;
+              width: 9px;
+              height: 5px;
+              border: solid hsl(0, 0%, 100%, 80%);
+              border-width: 0 0 2px 2px;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+      .boxForCheck:has(.wrongSubmit) + .errorMessage {
+        display: block;
+      }
+      label {
+        user-select: none;
+      }
+    }
+    button {
+      display: inline-block;
+      width: 100%;
+      height: 60px;
+      padding: 0;
+      border: none;
+      border-radius: 8px;
+      outline: inherit;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      background: $green600;
+      color: $white;
+    }
+    /////////
+  }
+}

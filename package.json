@@ -1,0 +1,14 @@
+{
+  "name": "contact-form-main",
+  "description": "frontend Mentor project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Batenkin Alexander",
+  "license": "ISC",
+  "dependencies": {
+    "email-validator": "^2.0.4"
+  }
+}

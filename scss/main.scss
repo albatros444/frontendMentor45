@@ -1,3 +1,55 @@
 @import "globals";
 @import "attribution";
 @import "variables";
+@import "card";
+@import "toast";
+
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  min-height: 100vh;
+  background-color: $green200;
+}
+fieldset {
+  border: none;
+  padding: 0;
+}
+label,
+legend {
+  position: relative;
+  color: hsl(187, 24%, 22%);
+  user-select: none;
+}
+label:after {
+  content: url(/assets/images/star.svg);
+  position: absolute;
+  top: -6px;
+  right: -15px;
+}
+input,
+textarea {
+  display: block;
+  position: relative;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  border-radius: 8px;
+  border: 1px solid hsl(187, 24%, 22%, 60%);
+  height: 48px;
+  width: 100%;
+  margin-top: 15px;
+  padding-left: 20px;
+  font-size: 18px;
+  color: hsl(187, 24%, 22%);
+  &:focus {
+    border: 1px solid hsl(169, 82%, 27%);
+  }
+}
+.errorMessage {
+  display: none;
+  margin-top: 10px;
+  color: $red;
+}

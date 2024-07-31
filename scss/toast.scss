@@ -1,0 +1,52 @@
+.toast {
+  position: fixed;
+  left: 50%;
+  top: 20px;
+  visibility: hidden;
+  padding: 25px;
+  z-index: 1;
+  margin-left: -220px; /////half of width ~440px
+
+  border-radius: 10px;
+  background-color: $gray900;
+  color: $green200;
+  .box {
+    display: flex;
+    margin-bottom: 14px;
+    img {
+      margin-right: 8px;
+    }
+    h2 {
+      font-size: 18px;
+    }
+  }
+  p {
+    font-weight: 300;
+    margin-bottom: 5px;
+  }
+}
+.toastShow {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 3.5s;
+}
+
+@keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 20px;
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    top: 20px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
