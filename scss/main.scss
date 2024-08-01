@@ -3,7 +3,6 @@
 @import "variables";
 @import "card";
 @import "toast";
-@import "mediaQs";
 
 .background {
   display: flex;
@@ -11,6 +10,7 @@
   align-items: center;
   height: auto;
   min-height: 100vh;
+  padding: 30px 4vw; //30px 15px
   background-color: $green200;
 }
 fieldset {
@@ -54,3 +54,5 @@ textarea {
   margin-top: 10px;
   color: $red;
 }
+
+@import "mediaQs";

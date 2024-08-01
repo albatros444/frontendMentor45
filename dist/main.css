@@ -316,45 +316,13 @@ ul {
     opacity: 0;
   }
 }
-@media screen and (max-width: 600px) {
-  .background {
-    padding: 30px 15px;
-  }
-  .background .card {
-    margin: 0;
-    padding: 22px;
-  }
-  .background .card .name {
-    display: block;
-  }
-  .background .card .queryType .inputBox {
-    display: block;
-  }
-  .background .card .boxForMessage textarea {
-    height: 240px;
-  }
-  .background .card .boxForCheckbox label {
-    line-height: 1.5;
-  }
-  .background .card .boxForCheckbox .errorMessage {
-    margin-left: 2px;
-  }
-  .background .card button {
-    margin-left: 2px;
-    margin-right: 2px;
-  }
-  .toast {
-    width: 80%;
-    margin: 0;
-    transform: translate(-50%);
-  }
-}
 .background {
   display: flex;
   justify-content: center;
   align-items: center;
   height: auto;
   min-height: 100vh;
+  padding: 30px 4vw;
   background-color: hsl(148, 38%, 91%);
 }
 
@@ -405,6 +373,40 @@ textarea:focus {
   display: none;
   margin-top: 10px;
   color: hsl(0, 66%, 54%);
+}
+
+@media screen and (max-width: 600px) {
+  .background {
+    padding: 8vw 4vw;
+  }
+  .background .card {
+    margin: 0;
+    padding: 22px;
+  }
+  .background .card .name {
+    display: block;
+  }
+  .background .card .queryType .inputBox {
+    display: block;
+  }
+  .background .card .boxForMessage textarea {
+    height: 240px;
+  }
+  .background .card .boxForCheckbox label {
+    line-height: 1.5;
+  }
+  .background .card .boxForCheckbox .errorMessage {
+    margin-left: 2px;
+  }
+  .background .card button {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  .toast {
+    width: 80%;
+    margin: 0;
+    transform: translate(-50%);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
